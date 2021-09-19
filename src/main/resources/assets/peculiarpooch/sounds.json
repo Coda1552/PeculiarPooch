@@ -1,0 +1,29 @@
+{
+  "borzoi.ambient": {
+    "subtitle": "peculiarpooch.borzoi.ambient",
+    "sounds": [
+      {
+        "name": "peculiarpooch:borzoi/ambient",
+        "stream": true
+      }
+    ]
+  },
+  "borzoi.hurt": {
+    "subtitle": "peculiarpooch.borzoi.hurt",
+    "sounds": [
+      {
+        "name": "peculiarpooch:borzoi/hurt",
+        "stream": true
+      }
+    ]
+  },
+  "borzoi.death": {
+    "subtitle": "peculiarpooch.borzoi.death",
+    "sounds": [
+      {
+        "name": "peculiarpooch:borzoi/death",
+        "stream": true
+      }
+    ]
+  }
+}
