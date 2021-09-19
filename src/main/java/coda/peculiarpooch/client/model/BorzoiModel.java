@@ -7,8 +7,6 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import java.util.Collections;
-
 @OnlyIn(Dist.CLIENT)
 public class BorzoiModel<T extends BorzoiEntity> extends AgeableModel<T> {
     public ModelRenderer body;
@@ -26,7 +24,7 @@ public class BorzoiModel<T extends BorzoiEntity> extends AgeableModel<T> {
     public ModelRenderer tongue;
 
     public BorzoiModel() {
-        super(true, 8.0F, 3.0F);
+        super(true, 12F, 2.5f);
         this.texWidth = 64;
         this.texHeight = 32;
         this.legRight = new ModelRenderer(this, 5, 2);
@@ -58,7 +56,7 @@ public class BorzoiModel<T extends BorzoiEntity> extends AgeableModel<T> {
         this.furLeft.setPos(2.0F, 2.5F, -1.0F);
         this.furLeft.addBox(0.0F, 0.0F, -3.5F, 0.0F, 3.0F, 7.0F, 0.0F, 0.0F, 0.0F);
         this.neck = new ModelRenderer(this, 0, 15);
-        this.neck.setPos(0.0F, -0.5F, -6.5F);
+        this.neck.setPos(0.0F, 12.0F, -6.5F);
         this.neck.addBox(-1.5F, -7.0F, -2.0F, 3.0F, 8.0F, 3.0F, 0.0F, 0.0F, 0.0F);
         this.legLeft = new ModelRenderer(this, 5, 2);
         this.legLeft.setPos(1.5F, 2.5F, 5.5F);
@@ -80,7 +78,6 @@ public class BorzoiModel<T extends BorzoiEntity> extends AgeableModel<T> {
         this.head.addChild(this.tongue);
         this.body.addChild(this.furRight);
         this.body.addChild(this.furLeft);
-        this.body.addChild(this.neck);
         this.body.addChild(this.legLeft);
         this.body.addChild(this.armRight);
         this.neck.addChild(this.head);
@@ -89,7 +86,7 @@ public class BorzoiModel<T extends BorzoiEntity> extends AgeableModel<T> {
 
     @Override
     protected Iterable<ModelRenderer> headParts() {
-        return Collections.emptyList();
+        return ImmutableList.of(neck);
     }
 
     @Override

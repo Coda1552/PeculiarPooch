@@ -5,7 +5,6 @@ import coda.peculiarpooch.client.model.BorzoiModel;
 import coda.peculiarpooch.common.entities.BorzoiEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -15,7 +14,7 @@ public class BorzoiRenderer extends MobRenderer<BorzoiEntity, BorzoiModel<Borzoi
     private static final ResourceLocation TEXTURE = new ResourceLocation(PeculiarPooch.MOD_ID, "textures/entity/borzoi.png");
 
     public BorzoiRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new BorzoiModel<>(), 0.75F);
+        super(renderManagerIn, new BorzoiModel<>(), 0.45F);
     }
 
     @Override

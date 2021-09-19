@@ -86,8 +86,13 @@ public class BorzoiEntity extends TameableEntity {
         }
     }
 
+    @Override
+    public ItemStack getPickedResult(RayTraceResult target) {
+        return new ItemStack(PPItems.BORZOI_SPAWN_EGG.get());
+    }
+
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.WOLF_GROWL;
+        return SoundEvents.WOLF_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource p_184601_1_) {
@@ -228,6 +233,6 @@ public class BorzoiEntity extends TameableEntity {
 
     @OnlyIn(Dist.CLIENT)
     public Vector3d getLeashOffset() {
-        return new Vector3d(0.0D, (double)(0.6F * this.getEyeHeight()), (double)(this.getBbWidth() * 0.4F));
+        return new Vector3d(0.0D, (1.4F * this.getEyeHeight()), (this.getBbWidth() * 0.45F));
     }
 }
